@@ -1,0 +1,193 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Admin Panel </title>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="toggle">
+        <a href="#" class="burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+              <span></span>
+            </a>
+      </div>
+      <div class="side-inner">
+        <div class="profile">
+          <img src="images/person_profile.jpg" alt="Image" class="img-fluid">
+          <p class="text-center name text-dark">کاربر : ادمین</p>
+          <span class="icon-power-off icon-p"></span>
+          <span class="icon-cog icon-p"></span></br>
+          <span class="country">[+]  مدیریت کتابخانه  [+]</span>
+        </div>
+        <div class="nav-menu">
+          <ul>
+            <li class="active"><a href="index.html"><span class="icon-th-large"></span>پیشخوان</a></li>
+            <li><a href="book.html"><span class="icon-people"></span>کتاب ها</a></li>
+            <li><a href="maghale.html"><span class="icon-insert_comment"></span> مقاله ها </a></li>
+            <li><a href="majale.html"><span class="icon-insert_comment"></span> مجله ها </a></li>
+            <li><a href="moedgozashte.html"><span class="icon-insert_comment"></span> لیست از موعد گذشته ها </a></li>
+            <li><a href="amanat.html"><span class="icon-insert_comment"></span> لیست کتاب های امانت برده شده </a></li>
+            <li><a href="#"><span class="icon-insert_comment"></span> خروج </a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </aside>
+    <main>
+ <!--  <div class="container"> -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-white">
+      <a class="navbar-brand text-warning" href="#" style="margin-right: 70px;">کتابخانه</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+              <li class="nav-item active">
+                  <a class="nav-link" href="#">خانه <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">پروفایل</a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="icon-bell-o elan"></span>
+                  </a>
+                <div class="dropdown-menu dropdown-menu-left zir-meno-elan" style="text-align: right;">
+                    <aria-labelledby="navbarDropdown>
+                    <a class="dropdown-item font2" href="#"> اعلانی یافت نشد <span class="icon-check2"></span></a>
+                </div>
+            </li>
+          </ul>
+      </div>
+  </nav>
+</div>
+<!-- End Header -->
+
+<!-- start content -->
+  <div class="col-12 bg-light">
+   <div class="meno-1">
+    <span class="span-meno"><a class="a-1" href="index.html">پیشخوان /</a></span>
+    <span class="span-meno"><a class="a-1" href="majale.html"> مجله ها /</a></span>
+    <span class="span-meno"><a class="a-1" href="#">افزودن مجله </a></span>
+   </div>
+  </div>
+
+</br>
+
+    <div class="div-back-table">
+
+      <div class="row">
+        <div class="col-md-12 col-md-offset-2 center">
+            <div class="section-title center">
+                 <div class="line">
+                    <hr>
+                </div>
+            
+           
+                <div class="clearfix"></div>
+           </div>
+            <form method="POST">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" style="font-family: vazir;"> عنوان </label>
+                            <input type="text"  name="" class="form-control" id="exampleInputEmail1" placeholder="  عنوان  ">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputName1" style="font-family: vazir;"> موضوع </label>
+                            <input type="text" name="" class="form-control" style="font-family: vazir;" id="exampleInputName1" placeholder="  موضوع  ">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputName1" style="font-family: vazir;">  شابک  </label>
+                            <input type="text"  name="" class="form-control" style="font-family: vazir;" id="exampleInputName1" placeholder=" شابک ">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputName1" style="font-family: vazir;">  تعداد صفحه </label>
+                            <input type="text"  name="" class="form-control" style="font-family: vazir;" id="exampleInputName1" placeholder=" تعداد صفحه ">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputName1" style="font-family: vazir;"> سال نشر </label>
+                            <input type="text"  name="" class="form-control" style="font-family: vazir;" id="exampleInputName1" placeholder="  سال نشر ">
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                          <label for="exampleInputName1" style="font-family: vazir;">  موضوع  </label>
+                          <input type="text"  name="" class="form-control" style="font-family: vazir;" id="exampleInputName1" placeholder=" موضوع ">
+                      </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="exampleInputName1" style="font-family: vazir;">  ناشر  </label>
+                        <input type="text"  name="" class="form-control" style="font-family: vazir;" id="exampleInputName1" placeholder=" ناشر ">
+                    </div>
+                </div>
+
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="exampleInputName1" style="font-family: vazir;">  اپلود مجله  </label>
+                      <input type="file"  name="" class="form-control" style="font-family: vazir;" id="exampleInputName1" placeholder=" ناشر ">
+                  </div>
+              </div>
+          
+                </div>
+        
+                <button type="submit" name="btn_insert" class="btn btn-primary" style="font-family: vazir;">افزودن</button>
+            </form>
+        
+        </br>
+        </div>
+    </div>
+
+</div>
+
+
+    </div>
+
+
+  <!-- End content -->
+
+<!-- start footer -->
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

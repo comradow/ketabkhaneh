@@ -1,0 +1,67 @@
+﻿@model IEnumerable<ketabkhaneh.Models.DB.BookAndMag>
+@{
+    Layout = "_AdminPanelLayout";
+    int index = 1;
+    @using Utilities;
+}
+
+<div class="row">
+    <a href="/PanelUser" class="btn btn-primary">لیست کتابهای قرض گرفته من</a>
+    <div class="col-8 col-md-6 col-lg-5">
+        <div class="container-fluid">
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+</div>
+            </br></br></br>
+<table class="table table-dark table-bordered table-striped table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>عـمـلـیـات</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Category)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type)
+                </td>
+                <td>
+                    <form asp-controller="PanelUser" asp-action="Borrow" method="post">
+                        <input name="bookid" type="hidden" value="@item.Id" />
+                        <button type="submit" class="btn btn-outline-success">قرض گرفتن</button>
+                    </form>
+                    @*<a href="/PanelUser/Borrow/@item.Id"><i class="btn btn-outline-success">قرض گرفتن</i></a> &nbsp;&nbsp;*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

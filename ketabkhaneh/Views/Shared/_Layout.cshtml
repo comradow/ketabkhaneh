@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کتابخانه ایران</title>
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <style>
+
+        .post-item-2 a .hover-post {
+            height: 180px;
+            width: 253px;
+            /*     width: 100%;
+           height: 100%; */
+            background-color: #000;
+            opacity: 0.6;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            margin-top: -180px;
+        }
+
+        .p-hover {
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            position: relative;
+            top: 70px;
+            margin-right: 60px;
+        }
+
+        .div-hover-p {
+            display: none !important;
+        }
+
+        .post-item-2:hover .div-hover-p {
+            display: block !important;
+        }
+
+        .span-post {
+            padding-top: 5px;
+            padding-left: 13px;
+            padding-bottom: 5px;
+            padding-right: 13px;
+            /*     background-color: #fff;
+        */ border: 1px dashed #ffffff;
+            transition: all 0.5s;
+            font-weight: bold;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            /*     background-color: #eee;
+        */
+        }
+
+            .span-post:hover {
+                border-top-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+                border: 1px dashed darkorange;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+            }
+
+        .post-item-2 {
+            margin-top: 30px;
+        }
+
+        .back-img3 {
+            background-image: url(img/bg1.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            min-height: 700px;
+        }
+
+        .box-search {
+            width: 100%;
+            min-height: 75px;
+            max-width: 720px;
+            position: relative;
+            top: 100px;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            margin: 0 auto;
+            border: 1px dashed #ffffff;
+            /*     background-color: rgb(247, 247, 247);
+        */
+        }
+
+        .in-text-header {
+            width: 81%; /* 81 73*/
+            height: 52px;
+            max-width: 880px;
+            margin-right: 17px;
+            display: inline-block;
+            outline: none;
+            margin-top: 9px;
+            background-color: #fff;
+            padding-right: 10px;
+            font-size: 15px;
+            border: 4px solid #e6e2e2; /* e6e2e2 77c430 */
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        .btn-header {
+            width: 100%;
+            max-width: 107px;
+            text-align: center;
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-top: 12px;
+            padding-bottom: 13px;
+            /*     border: 4px solid #e6e2e2;
+        */
+            position: relative;
+            left: 10px;
+            outline: none;
+            background-color: #77c430;
+            color: #fff;
+            font-weight: 600;
+            border: 2px solid #77c430;
+            border-top-left-radius: 26px;
+            border-bottom-left-radius: 26px;
+        }
+
+        .mtn-h {
+            position: relative;
+            top: 80px;
+            font-weight: bold;
+            text-shadow: 2px 2px 7px #706e6e;
+        }
+
+        .mtn-h2 {
+            position: relative;
+            top: 110px;
+            font-weight: bold;
+            text-shadow: 2px 2px 7px #706e6e;
+        }
+
+        .img-h3 {
+            border: 2px solid #dfdddd;
+            border-radius: 10px;
+            margin-right: 50px;
+            width: 45%;
+            /*  background-color: #0000004f;
+        */
+        }
+
+        .mtn-n-2 {
+            margin-right: 47px;
+            position: relative;
+            top: 10px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .mtn-z {
+            font-size: 13px;
+            position: relative;
+            top: 10px;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="back-img3">
+        <div class="container">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <a class="navbar-brand text-warning" href="#">وبلاگ</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            @Html.ActionLink("خانه", "index", "Home", new object { }, new { @class = "nav-link" })
+                            @*<a class="nav-link" href="#">خانه <span class="sr-only">(current)</span></a>*@
+                        </li>
+
+                        @if (!User.Identity.IsAuthenticated)
+                        {
+                        <li class="nav-item">
+                            @Html.ActionLink("ورود کاربر", "Login", "AddUser", new object { }, new { @class = "nav-link" })
+                            @*<a class="nav-link" href="login/">ورود / ثبت نام</a>*@
+                         </li>
+                         <li class="nav-item">
+                            @Html.ActionLink("ثبت نام کاربر", "SignUp", "AddUser", new object { }, new { @class = "nav-link" })
+                            @*<a class="nav-link" href="login/">ورود / ثبت نام</a>*@
+                         </li>
+                             <li class="nav-item">
+                                @*@Html.ActionLink("ورود مدیر", "index", "LoginManager", new object { }, new { @class = "nav-link" })*@
+                                <a class="nav-link" href="/Addmanager/login">ورود مدیر</a>
+                            </li>
+
+                             <li class="nav-item">
+                                 <a class="nav-link" href="/Addmanager/Signup">ثبت نام مدیر</a>
+                             </li>
+
+                          }
+                          else
+                          {
+                              <li class="nav-item">
+                                  <a class="nav-link" href="/Addmanager/logout">@($"خروج از حساب {User.Identity.Name}")</a>
+                              </li>
+                          }
+                    </ul>
+                    <form asp-controller="Home" asp-action="Search" method="post" class="form-inline my-2 my-lg-0 mr-auto">
+                        <input name="parametr" class="form-control mr-sm-2 placholder" style="border-top-left-radius: 0px !important;border-bottom-left-radius: 0px !important;" placeholder="دنبال چی میگردی؟" aria-label="Search">
+                        <button class="btn btn-primary my-2 my-sm-0" style="border-top-right-radius: 0px !important; border-bottom-right-radius: 0px;" type="submit">جستجو</button>
+                    </form>
+                </div>
+            </nav>
+
+
+
+        </div>
+
+
+        @RenderBody()
+
+
+
+
+        <footer style="position:fixed;width:100%;bottom:0px;">
+            <div class="footer1">
+                <p class="text-center text=bold text-white " style="position: relative; top: 17px;font-size: 14px;">کتابخانه ایران 2022 - 2021 تمامی حقوق محفوظ میباشد و هرگونه تخلف پیگرد قانونی دارد</p>
+        </footer>
+
+    </div>
+</body>
+</html>

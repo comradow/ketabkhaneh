@@ -1,0 +1,30 @@
+﻿@model ketabkhaneh.Models.ViewModels.LoginViewModel
+@{
+}
+
+    <div class="back1">
+
+        <br><br> <br><br>
+        <h5 class="text-dark text-bala text-center">ورود مدیر </h5>
+        <br><br><br>
+        <form asp-action="Login" asp-controller="AddUser" method="post">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <label>ایمیل</label>
+                        <input asp-for="Email" type="text" class="form-control" required /><br>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <label>رمز</label>
+                        <input asp-for="PassWord" type="password" class="form-control" required /><br>
+                    </div>
+                </div>
+                <center>
+                    <div class="col-12">
+
+                        <input type="submit" name="" id="" class="form-control btn btn-warning" value="ورود مدیر">
+                    </div>
+                </center>
+            </div>
+        </form>
+    </div>

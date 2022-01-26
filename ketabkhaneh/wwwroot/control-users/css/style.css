@@ -1,0 +1,23 @@
+*{
+    direction: rtl;
+    align-items: right;
+    text-align: right;
+}
+
+.border1{
+    border: 1px dashed #4d4d4d;
+    min-height: 300px;
+    border-radius: 7px;
+}
+
+
+/* .footer1{
+	background-color: #555;
+	min-height: 80px;
+	width: 100% !important;
+	text-align: center;
+	align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+ */

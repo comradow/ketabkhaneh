@@ -1,0 +1,43 @@
+﻿@model ketabkhaneh.Models.DB.BookAndMag
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_AdminPanelLayout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>BookAndMag</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Author)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Author)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id"><i class="btn btn-warning">ویرایش</i></a> &nbsp;&nbsp;
+    <a asp-action="Index">بازگشت</a>
+</div>

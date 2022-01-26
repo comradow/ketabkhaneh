@@ -1,0 +1,41 @@
+﻿@model List<ketabkhaneh.Models.ViewModels.BorrowedAndUserViewModel>
+@{
+    Layout = "_AdminPanelLayout";
+    int index = 1;
+    @using Utilities; 
+}
+
+<div class="row">
+    <a href="/BookAndMags" class="btn btn-primary">لیست کتابها</a>&nbsp;&nbsp;
+    <a href="/panelmanager/BorrowedBooks" class="btn btn-secondary">لیست کتابهای قرض داده شده</a>&nbsp;&nbsp;
+    <a href="/panelmanager" class="btn btn-outline-warning">لیست اعضا</a>&nbsp;&nbsp;
+
+</div>
+</br></br></br>
+<table class="table table-dark table-bordered table-striped table-hover">
+    <tr>
+        <th>ردیف</th>
+        <th>نام کتاب/مجله</th>
+        <th>نام کاربر </th>
+        <th>تاریخ تحویل گرفته شده</th>
+        <th>تاریخ بازگشت کتاب/مجله</th>
+        <th>تحویل داده شده</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@index</td>
+            <td>@item.BookOrMagName</td>
+            <td>@item.UserName</td>
+            <td>@(Shamsi.ToShamsi(Convert.ToDateTime(item.BorrowedDate.DateTime)))</td>
+            <td>@(Shamsi.ToShamsi(Convert.ToDateTime(item.ReturnDate.DateTime)))</td>
+            <td><input type="checkbox" @(item.IsReturned ? "checked":"") disabled/></td>
+            @*<td><b><a href='#' class='a1 text-danger text-center text-decoration-none'>حذف</a></b></td>
+                <td><b><a href='#' class='a1 text-warning text-center text-decoration-none'>ویرایش</a></b></td>*@
+        </tr>
+        index++;
+    }
+
+
+</table>
